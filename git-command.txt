@@ -13,3 +13,4 @@ git命令
 12. git reflog  //获取版本的修改记录
 13. git checkout -- readme.txt //撤销readme.txt文件的修改
 14. rm readme.txt //删除readme.txt文件
+15. git checkout -b dev //创建并切换到分支
