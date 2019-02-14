@@ -22,4 +22,4 @@ git命令
 21. git checkout name //切换分支
 22. git checkout -b name // 创建并切换分支
 23. git branch -d name //删除分支
-dev分支添加信息
+dev分支添加信息-guoxz
