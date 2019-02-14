@@ -1,1 +1,15 @@
-go 
+git命令
+1. git config --global user.name "guoxz"//设置用户名
+2. git config --global user.email "1069430272@qq.com" //设置邮箱
+3. git init //创建本地仓库
+4. git add readme.txt //将readme.txt文件添加到暂存区
+5. git commit -m "first time to commit" //将文件提交到仓库中，本次提交的描述为"first time to commit"
+6. git status //查看是否有文件修改没有提交
+7. git diff readme.txt //仓库文件和本地文件的比对
+8. git log //查看版本提交信息
+9. git log –-pretty=oneline //查看简化版的版本提交信息
+10. git reset --hard HEAD^ //回退到上一个脚本，HEAD^^回退到上上一个版本，HEAD~100回退到上100个版本
+11. git reset --hard 版本号 //回退到版本号
+12. git reflog  //获取版本的修改记录
+13. git checkout -- readme.txt //撤销readme.txt文件的修改
+14. rm readme.txt //删除readme.txt文件
