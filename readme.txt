@@ -1,3 +1,0 @@
-guoxz i love youi
-Äã²»ÄÜĞ´´í°¡
-guoxz i love you
