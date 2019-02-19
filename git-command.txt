@@ -9,16 +9,33 @@ git命令
 8. git log //查看版本提交信息
 9. git log –-pretty=oneline //查看简化版的版本提交信息
 10. git reset --hard HEAD^ //回退到上一个脚本，HEAD^^回退到上上一个版本，HEAD~100回退到上100个版本
-11. git reset --hard 版本号 //回退到版本号
+11-1. git reset --hard 版本号 //回退到版本号
+11-2. git reset HEAD readme.txt //将readme.txt文件回退到上一个版本
 12. git reflog  //获取版本的修改记录
 13. git checkout -- readme.txt //撤销readme.txt文件的修改
 14. rm readme.txt //删除readme.txt文件
-15. git remote add origin https://github.com/guoxingzhi/testgit.git //将本地库关联到git服务器上
+15-1. git remote add origin https://github.com/guoxingzhi/testgit.git //采用https协议，将本地库关联到git服务器上；速度慢；每次都得输入密码
+15-2. git remote add origin git@github.com:guoxingzhi/testgit.git //采用ssh协议，将本地库关联到git服务器上；git原生协议，速度快；推荐使用
 16. git push origin master //将本地的git库上传到git服务器上
-17. git clone https://github.com/guoxingzhi/testgit.git //将git远程服务器代码克隆到本地
+17-1. git clone https://github.com/guoxingzhi/testgit.git //采用https协议，将git远程服务器代码克隆到本地
+17-2. git clone git@github.com:guoxingzhi/testgit.git //采用ssh协议，将git远程服务器代码克隆到本地
 18. git checkout -b dev //创建并切换到分支
 19. git branch //查看分支
 20. git branch name //创建分支
 21. git checkout name //切换分支
 22. git checkout -b name // 创建并切换分支
 23. git branch -d name //删除分支
+24. git stash //把当前工作现场“储藏”起来，用于bug分支的创建
+25. git stash list //查看“储藏”现场的list
+26. git stash apply stash@{0} //恢复“储藏”现场
+27. git checkout -b dev origin/dev //获取远程origin的dev分支
+28. git push origin dev //推送到远程origin的dev分支，如果失败了，可能别人先于你进行了提交，使用git pull进行更新；git pull失败则执行29命令
+29. git branch --set-upstream-to=origin/dev dev //将远程origin的dev分支关联到本地的dev分支
+30. git remote -v //查看远程库信息
+31. git tag v1.0 //基于当前分支，打标签
+32. git tag //查询标签信息
+33. git tag v0.9 f52c633 //给固定的commit打标签
+34. git tag -d v0.1 //删除标签
+35. git push origin v1.0 //将标签推送到远程origin
+36. git push origin --tags //将所有标签推送到远程origin
+37. git push origin :refs/tags/<tagname> //删除远程origin的标签
